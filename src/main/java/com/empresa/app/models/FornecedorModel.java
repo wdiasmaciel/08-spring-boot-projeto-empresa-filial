@@ -54,11 +54,11 @@ public class FornecedorModel {
 
     public FornecedorModel(FornecedorResponseDto fornecedorResponseDto) throws IllegalArgumentException {
         if (fornecedorResponseDto == null) 
-            throw new IllegalArgumentException("FornecedorRequestDto não pode ser nulo.");
+            throw new IllegalArgumentException("FornecedorResponseDto não pode ser nulo.");
 
         if (fornecedorResponseDto.getId() == null) 
-            throw new IllegalArgumentException("FornecedorResponseDto nõa pote ter ID nulo.");
+            throw new IllegalArgumentException("FornecedorResponseDto não pote ter ID nulo.");
 
-            BeanUtils.copyProperties(this, fornecedorResponseDto);
+            BeanUtils.copyProperties(fornecedorResponseDto, this);
     }
 }
