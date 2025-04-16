@@ -11,6 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class FornecedorResponseDto {
 
     /*
@@ -20,6 +21,7 @@ public class FornecedorResponseDto {
      */
     @NotNull
     @NotBlank
+    @EqualsAndHashCode.Include
     private UUID id;
 
     @NotNull
